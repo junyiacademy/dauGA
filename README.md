@@ -1,4 +1,4 @@
-# 把 GA 的 Log Raw Data 抓出來再上傳到 BigQuery
+# 倒GA：把 GA 的 Log Raw Data 抓出來再上傳到 BigQuery
 
 ## 運行方式
 1. Copy sample_config.py to config.py
@@ -53,3 +53,7 @@ Google提供的[Demo網站](https://ga-dev-tools.appspot.com/dimensions-metrics-
 
 1. 目前上傳的 BrowserUTC time 本身是含有 milli-second 的資料，但是因為 pd.to_gbq function 似乎只會上傳到 second 而已，如果真的需要更高的 resolution，之後可以有兩個作法 a. 修改 Pandas, b. 改成上傳 string，之後再用 query 的方式處理。
 2. ga_session_time & backup_date 其實都不是 UTC time，但是資料欄位裡面還是顯示是 utc ，但是目前看起來也不好調，很可能要動到 pandas，之後可以找機會來處理。 
+
+## Contributors
+- ENsu (Main)
+- Microsheep
