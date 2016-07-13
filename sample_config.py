@@ -2,7 +2,6 @@
 
 # Project ID and dataset to use in Big query
 PROJECT_ID = "my_project"
-#DATA_SET = "GoogleAnalyticsData"
 DATA_SET = "my_ga_data"
 GA_BQ_UPLOAD_STATUS_LOG = (DATA_SET+".upload_progress_log")
 # View ID of GA. Check your GA view to find it.
